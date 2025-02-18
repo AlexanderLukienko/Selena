@@ -86,3 +86,27 @@ body {
     display: block;
     margin: 0 auto;  /* Убираем лишние отступы */
 }
+
+/* Стили для блока с рейтингом */
+.rating {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Звёздочки рейтинга */
+.stars {
+    color: #FFD700; /* Золотой цвет */
+    font-size: 20px;
+}
+
+/* Текст рейтинга */
+.rating-text {
+    color: #333; /* Тёмно-серый */
+    font-weight: normal; /* Обычный шрифт для всего текста */
+}
+
+/* Жирный стиль только для числа 4.8 */
+.bold-number {
+    font-weight: bold;
+}
