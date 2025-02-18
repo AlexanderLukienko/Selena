@@ -78,3 +78,11 @@ body {
     padding: 10px 0;
     width: 100%;
 }
+
+.product-img {
+    width: 100vw;  /* Во всю ширину экрана */
+    max-width: 100%;  /* Ограничиваем ширину, чтобы не выходило за границы */
+    height: auto;  /* Сохраняем пропорции */
+    display: block;
+    margin: 0 auto;  /* Убираем лишние отступы */
+}
