@@ -110,3 +110,43 @@ body {
 .bold-number {
     font-weight: bold;
 }
+
+/* Стили для блока с рейтингом */
+.rating {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем содержимое */
+}
+
+/* Исправляем цвет звёзд */
+.stars {
+    color: #FFD700 !important; /* Принудительно делаем золотыми */
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Текст рейтинга */
+.rating-text {
+    color: #333; /* Тёмно-серый */
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Жирный стиль только для числа 4.8 */
+.bold-number {
+    font-weight: bold;
+}
+
+/* Дополнительно: исправляем центрирование на мобильных */
+@media (max-width: 768px) {
+    .rating {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
