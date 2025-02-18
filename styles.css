@@ -1,110 +1,30 @@
+/* Убираем отступы у body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    padding: 20px;
-}
-.container {
-    max-width: 600px;
+    margin: 0;
+    padding: 0;
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Верхний баннер */
+/* Темно-зелёный верхний блок */
 .top-banner {
-    background: #4CAF50;
+    background: #1B5E20; /* Темно-зелёный цвет */
     color: white;
-    padding: 10px;
-    font-size: 18px;
     text-align: center;
+    padding: 20px;
+    font-size: 20px;
     font-weight: bold;
 }
-.timer {
-    font-size: 22px;
-    font-weight: bold;
+
+/* Убираем отступы у body */
+body {
+    margin: 0;
+    padding: 0;
     background: white;
-    color: red;
-    padding: 5px 10px;
-    display: inline-block;
-    border-radius: 5px;
-    margin-top: 5px;
 }
 
-/* ✅ Жёлтая полоса на всю ширину и уменьшенный шрифт */
-.sale-banner {
-    background: #E5C16C; /* Новый, более мягкий жёлтый */
-    text-align: center;
-    padding: 6px 0; /* Уменьшаем высоту */
-    font-weight: bold;
-    font-size: 14px; /* Делаем шрифт чуть меньше */
-    margin: 0; /* Убираем внешние отступы */
-}
-
-
-/* Выбор товара */
-.package-options .card {
-    text-align: center;
-    margin: 10px 0;
-}
-.best-deal {
-    border: 2px solid red;
-}
-
-/* Подарки */
-.gift-items {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-}
-.gift-card {
-    text-align: center;
-}
-.gift-card img {
-    width: 60px;
-    height: 60px;
-}
-
-.product-img {
-    width: 100%;       /* Заполнит доступное пространство */
-    max-width: 300px;  /* Но не больше 300px */
-    height: auto;      /* Сохранит пропорции */
-    display: block;
-    margin: 20px auto; /* Выравнивание по центру */
-}
-
-/* ✅ Рамка вокруг "Order by..." */
-.order-date {
-    border: 2px dashed #4CAF50;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 8px;
-    margin: 15px 0;
-    background: #f9fff9;
-}
-
-/* ✅ Полностью кликабельные карточки выбора товара */
-.package-options .card {
-    text-align: center;
-    margin: 10px 0;
-    padding: 15px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: 0.3s;
-}
-.package-options .card:hover,
-.package-options .card.selected {
-    border-color: #4CAF50; /* Зелёная рамка при выборе */
-    background-color: #f9fff9;
-}
-.package-options input {
-    display: none; /* Скрываем стандартный кружок */
-}
-
-/* ✅ Темно-зелёный фон, белый текст */
+/* Верхний зелёный блок */
 .top-banner {
-    background: #2E7D32;  /* Темно-зелёный цвет */
+    background: #1B5E20; /* Темно-зелёный цвет */
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -114,28 +34,47 @@ body {
     font-weight: bold;
 }
 
-/* ✅ Стили для текста слева */
+/* Текст акции */
 .sale-text {
     flex-grow: 1;
 }
 
-/* ✅ Блоки с таймером */
+/* Таймер */
 .countdown {
     display: flex;
     align-items: center;
 }
 
-/* ✅ Квадраты для часов, минут, секунд */
+/* Белые квадраты таймера с фиолетовым фоном внутри */
 .time-box {
     width: 50px;
     height: 50px;
     background: white;
-    color: black;
+    color: #673AB7; /* Фиолетовый текст */
     font-size: 22px;
     font-weight: bold;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
-    margin: 0 5px;
+    border-radius: 5px;
+    margin: 0 3px;
+}
+
+/* Подписи HRS, MIN, SEC */
+.time-box small {
+    font-size: 10px;
+    font-weight: normal;
+    color: #673AB7; /* Делаем подписи тоже фиолетовыми */
+}
+
+/* Темно-жёлтый блок */
+.sale-banner {
+    background: #D7A128; /* Темно-жёлтый цвет */
+    color: black;
+    text-align: center;
+    font-size: 16px; /* Немного меньше, чем в верхнем блоке */
+    font-weight: bold;
+    padding: 10px 0;
+    width: 100%;
 }
