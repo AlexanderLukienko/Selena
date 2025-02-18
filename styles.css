@@ -150,3 +150,29 @@ body {
         justify-content: center;
     }
 }
+
+/* ✅ Пунктирная зелёная рамка */
+.order-box {
+    border: 2px dashed #4CAF50; /* Зелёная пунктирная рамка */
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px; /* Закругляем углы */
+    margin: 15px auto;
+    max-width: 80%; /* Делаем ширину не слишком большой */
+    background: #f9fff9; /* Светло-зелёный фон */
+}
+
+/* ✅ Выделяем дату зелёным */
+.bold-green {
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+/* ✅ Делаем блок адаптивным на мобильных */
+@media (max-width: 768px) {
+    .order-box {
+        max-width: 90%;
+        font-size: 14px; /* Чуть меньше текст на мобильных */
+    }
+}
