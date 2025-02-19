@@ -1,30 +1,13 @@
-/* Убираем отступы у body */
+/* ✅ Общие стили */
 body {
     margin: 0;
     padding: 0;
     background: white;
 }
 
-/* Темно-зелёный верхний блок */
+/* ✅ Верхний зелёный блок */
 .top-banner {
-    background: #1B5E20; /* Темно-зелёный цвет */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* Убираем отступы у body */
-body {
-    margin: 0;
-    padding: 0;
-    background: white;
-}
-
-/* Верхний зелёный блок */
-.top-banner {
-    background: #1B5E20; /* Темно-зелёный цвет */
+    background: #1B5E20;
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -34,23 +17,23 @@ body {
     font-weight: bold;
 }
 
-/* Текст акции */
+/* ✅ Текст акции */
 .sale-text {
     flex-grow: 1;
 }
 
-/* Таймер */
+/* ✅ Таймер */
 .countdown {
     display: flex;
     align-items: center;
 }
 
-/* Белые квадраты таймера с фиолетовым фоном внутри */
+/* ✅ Белые квадраты таймера */
 .time-box {
     width: 50px;
     height: 50px;
     background: white;
-    color: #673AB7; /* Фиолетовый текст */
+    color: #673AB7;
     font-size: 22px;
     font-weight: bold;
     display: flex;
@@ -61,106 +44,74 @@ body {
     margin: 0 3px;
 }
 
-/* Подписи HRS, MIN, SEC */
+/* ✅ Подписи HRS, MIN, SEC */
 .time-box small {
     font-size: 10px;
     font-weight: normal;
-    color: #673AB7; /* Делаем подписи тоже фиолетовыми */
+    color: #673AB7;
 }
 
-/* Темно-жёлтый блок */
+/* ✅ Темно-жёлтый блок */
 .sale-banner {
-    background: #D7A128; /* Темно-жёлтый цвет */
+    background: #D7A128;
     color: black;
     text-align: center;
-    font-size: 16px; /* Немного меньше, чем в верхнем блоке */
+    font-size: 16px;
     font-weight: bold;
     padding: 10px 0;
     width: 100%;
 }
 
+/* ✅ Картинка продукта */
 .product-img {
-    width: 100vw;  /* Во всю ширину экрана */
-    max-width: 100%;  /* Ограничиваем ширину, чтобы не выходило за границы */
-    height: auto;  /* Сохраняем пропорции */
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
     display: block;
-    margin: 0 auto;  /* Убираем лишние отступы */
+    margin: 0 auto;
 }
 
-/* Стили для блока с рейтингом */
-.rating {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-/* Звёздочки рейтинга */
-.stars {
-    color: #FFD700; /* Золотой цвет */
-    font-size: 20px;
-}
-
-/* Текст рейтинга */
-.rating-text {
-    color: #333; /* Тёмно-серый */
-    font-weight: normal; /* Обычный шрифт для всего текста */
-}
-
-/* Жирный стиль только для числа 4.8 */
-.bold-number {
-    font-weight: bold;
-}
-
-/* Стили для блока с рейтингом */
+/* ✅ Блок с рейтингом */
 .rating {
     text-align: center;
     font-size: 18px;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрируем содержимое */
+    align-items: center;
+    justify-content: center;
 }
 
-/* Исправляем цвет звёзд */
+/* ✅ Звёздочки */
 .stars {
-    color: #FFD700 !important; /* Принудительно делаем золотыми */
+    color: #FFD700 !important;
     font-size: 20px;
     display: inline-block;
     margin-bottom: 5px;
 }
 
-/* Текст рейтинга */
+/* ✅ Текст рейтинга */
 .rating-text {
-    color: #333; /* Тёмно-серый */
+    color: #333;
     font-weight: normal;
     text-align: center;
 }
 
-/* Жирный стиль только для числа 4.8 */
+/* ✅ Жирный стиль только для числа 4.8 */
 .bold-number {
     font-weight: bold;
 }
 
-/* Дополнительно: исправляем центрирование на мобильных */
-@media (max-width: 768px) {
-    .rating {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-/* ✅ Пунктирная зелёная рамка */
+/* ✅ Зелёная пунктирная рамка */
 .order-box {
-    border: 2px dashed #4CAF50; /* Зелёная пунктирная рамка */
+    border: 2px dashed #4CAF50;
     padding: 10px;
     text-align: center;
     font-weight: bold;
-    border-radius: 8px; /* Закругляем углы */
+    border-radius: 8px;
     margin: 15px auto;
-    max-width: 80%; /* Делаем ширину не слишком большой */
-    background: #f9fff9; /* Светло-зелёный фон */
+    max-width: 80%;
+    background: #f9fff9;
 }
 
 /* ✅ Выделяем дату зелёным */
@@ -169,11 +120,144 @@ body {
     font-weight: bold;
 }
 
-/* ✅ Делаем блок адаптивным на мобильных */
+/* ✅ Делаем рамку адаптивной на мобильных */
 @media (max-width: 768px) {
     .order-box {
         max-width: 90%;
-        font-size: 14px; /* Чуть меньше текст на мобильных */
-        display: block; /* Делаем его видимым */
+        font-size: 14px;
+    }
+}
+
+/* ✅ Контейнер для карточек */
+.package-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* ✅ Карточка товара */
+.package-card {
+    width: 200px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    background: white;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+/* ✅ Выделенная карточка */
+.package-card.selected {
+    border-color: #4CAF50 !important;
+    background: #E8F5E9 !important;
+    transform: scale(1.05);
+}
+
+/* ✅ Наведение на карточку */
+.package-card:hover {
+    border-color: #4CAF50;
+    transform: scale(1.05);
+}
+
+/* ✅ Лучшее предложение ("BEST DEAL") */
+.best-deal {
+    border: 3px solid red;
+    position: relative;
+}
+
+/* ✅ Красный бейджик "BEST DEAL" */
+.badge {
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ✅ Улучшаем скрытие радио-кнопки */
+.package-card input {
+    opacity: 0;
+    position: absolute;
+}
+
+/* ✅ Адаптация для мобильных */
+@media (max-width: 768px) {
+    .package-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    .package-card {
+        width: 90%;
+    }
+}
+/* ✅ Секция с выбором сферы */
+.choose-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+/* ✅ Заголовок */
+.choose-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ✅ Две колонки */
+.columns {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* ✅ Стили списка */
+.column {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* ✅ Подложка на каждый пункт */
+.column li {
+    background: #E8F5E9; /* Светло-зелёный фон */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+/* ✅ Эффект при наведении */
+.column li:hover {
+    background: #C8E6C9;
+    transform: scale(1.05);
+}
+
+/* ✅ Адаптация для мобильных */
+@media (max-width: 768px) {
+    .columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .column {
+        text-align: center;
     }
 }

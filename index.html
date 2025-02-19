@@ -3,23 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
+    <title>Акция</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <script src="scripts.js"></script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Акция</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
     <!-- Верхний зелёный блок с текстом и таймером -->
     <div class="top-banner">
         <span class="sale-text">Save up to 46% with <b>4 FREE Gifts</b></span>
@@ -30,25 +18,76 @@
         </div>
     </div>
 
+    <!-- Желтая полоса с акцией -->
+    <div class="sale-banner">
+        LIMITED TIME - SUMMER KICK-OFF SALE
+    </div>
+
+    <!-- Картинка продукта -->
+    <img src="images/product2.png" alt="Main Product" class="product-img">
+
+    <!-- Блок с рейтингом -->
+    <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-text">Excellent <b class="bold-number">4.8</b> (19,579+ trusted reviews)</span>
+    </div>
+
+    <!-- Зелёная пунктирная рамка с текстом -->
+    <div class="order-box">
+        📅 Order by <span class="bold-green">Jun. 26th</span> for guaranteed <b>FREE Gifts</b>
+    </div>
+
+    <!-- Секция выбора упаковки -->
+    <div class="package-options">
+        <div class="package-card best-deal">
+            <span class="badge">BEST DEAL</span>
+            <h3>🔥 4 Pouches</h3>
+            <p>$14.95/each</p>
+            <input type="radio" name="package" value="4" checked>
+        </div>
+
+        <div class="package-card">
+            <h3>3 Pouches</h3>
+            <p>$16.95/each</p>
+            <input type="radio" name="package" value="3">
+        </div>
+
+        <div class="package-card">
+            <h3>2 Pouches</h3>
+            <p>$19.95/each</p>
+            <input type="radio" name="package" value="2">
+        </div>
+
+        <div class="package-card">
+            <h3>1 Pouch</h3>
+            <p>$21.95</p>
+            <input type="radio" name="package" value="1">
+        </div>
+    </div>
+
+    <!-- Секция выбора сферы -->
+<div class="choose-section">
+    <h2>Ты можешь выбрать разбор любых сфер из списка</h2>
+    <div class="columns">
+        <ul class="column">
+            <li>Любовь и отношения</li>
+            <li>Деньги и материальная стабильность</li>
+            <li>Работа, карьера, призвание</li>
+            <li>Способности и сильные стороны</li>
+            <li>Слабые места и страхи</li>
+        </ul>
+        <ul class="column">
+            <li>Внутренние демоны и борьба с собой</li>
+            <li>Психологическая карта: мысли, установки, сценарии</li>
+            <li>Периоды апатии, уныния и выхода из них</li>
+            <li>Дети, воспитание и семейные связи</li>
+            <li>Личностный рост и развитие</li>
+        </ul>
+    </div>
+</div>
+
+    <!-- Подключаем JavaScript в конце body -->
     <script src="scripts.js"></script>
+
 </body>
-
-<!-- Желтая полоса с акцией -->
-<div class="sale-banner">
-    LIMITED TIME - SUMMER KICK-OFF SALE
-</div>
-<img src="images/product2.png" alt="Main Product" class="product-img">
-
-<!-- Блок с рейтингом -->
-<div class="rating">
-    <span class="stars">★★★★★</span>
-    <span class="rating-text">Excellent <b class="bold-number">4.8</b> (19,579+ trusted reviews)</span>
-</div>
-
-<!-- Зелёная пунктирная рамка с текстом -->
-<div class="order-box">
-    📅 Order by <span class="bold-green">Jun. 26th</span> for guaranteed <b>FREE Gifts</b>
-</div>
-
-
 </html>
