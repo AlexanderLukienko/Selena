@@ -208,11 +208,13 @@ body {
     border-radius: 10px;
 }
 
-/* ✅ Заголовок */
+/* ✅ Центрируем заголовок */
 .choose-section h2 {
     font-size: 22px;
     margin-bottom: 20px;
     color: #333;
+    text-align: center; /* Центрируем заголовок */
+    width: 100%;
 }
 
 /* ✅ Две колонки */
@@ -234,14 +236,23 @@ body {
     max-width: 300px;
 }
 
-/* ✅ Подложка на каждый пункт */
+/* ✅ Подложка на каждый пункт (с рамкой) */
 .column li {
     background: #E8F5E9; /* Светло-зелёный фон */
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
+    border: 2px solid #4CAF50; /* Зелёная рамка */
     transition: 0.3s;
     text-align: center;
+}
+
+/* ✅ Исправляем отображение рамок на мобильных */
+@media (max-width: 768px) {
+    .column li {
+        border-width: 2px; /* Гарантированно показываем рамку */
+        padding: 12px; /* Чуть больше отступ */
+    }
 }
 
 /* ✅ Эффект при наведении */
@@ -250,14 +261,3 @@ body {
     transform: scale(1.05);
 }
 
-/* ✅ Адаптация для мобильных */
-@media (max-width: 768px) {
-    .columns {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .column {
-        text-align: center;
-    }
-}
