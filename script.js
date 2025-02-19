@@ -1,20 +1,35 @@
-// Таймер обратного отсчёта
 function startCountdown(duration) {
     let timer = duration;
-    setInterval(function () {
+
+    function updateCountdown() {
         let hours = Math.floor(timer / 3600);
         let minutes = Math.floor((timer % 3600) / 60);
         let seconds = timer % 60;
 
-        // ✅ Исправляем ID, чтобы таймер работал
-        document.getElementById('hours').textContent = (hours < 10 ? "0" : "") + hours;
-        document.getElementById('minutes').textContent = (minutes < 10 ? "0" : "") + minutes;
-        document.getElementById('seconds').textContent = (seconds < 10 ? "0" : "") + seconds;
+        // Проверяем, есть ли элементы на странице
+        let hoursElement = document.getElementById('hours');
+        let minutesElement = document.getElementById('minutes');
+        let secondsElement = document.getElementById('seconds');
 
-        if (--timer < 0) { timer = duration; }
-    }, 1000);
+        if (hoursElement && minutesElement && secondsElement) {
+            hoursElement.textContent = (hours < 10 ? "0" : "") + hours;
+            minutesElement.textContent = (minutes < 10 ? "0" : "") + minutes;
+            secondsElement.textContent = (seconds < 10 ? "0" : "") + seconds;
+        }
+
+        if (--timer < 0) {
+            timer = duration; // Можно остановить таймер, если нужен однократный отсчёт
+        }
+    }
+
+    updateCountdown(); // Запускаем сразу, чтобы не ждать 1 секунду
+    setInterval(updateCountdown, 1000); // Обновляем каждую секунду
 }
-startCountdown(9 * 3600 + 33 * 60 + 32);
+
+// Запускаем таймер на 9 часов 33 минуты 32 секунды
+document.addEventListener("DOMContentLoaded", function () {
+    startCountdown(9 * 3600 + 33 * 60 + 32);
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     // Делаем карточки товаров кликабельными
