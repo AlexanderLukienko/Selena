@@ -199,7 +199,7 @@ body {
         width: 90%;
     }
 }
-/* ✅ Секция с выбором сферы */
+/* ✅ Основной контейнер */
 .choose-section {
     text-align: center;
     margin-top: 40px;
@@ -213,47 +213,42 @@ body {
     font-size: 22px;
     margin-bottom: 20px;
     color: #333;
-    text-align: center; /* Центрируем заголовок */
+    text-align: center;
     width: 100%;
 }
 
-/* ✅ Две колонки */
+/* ✅ Контейнер для списка */
 .columns {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* ✅ Две колонки */
+    gap: 10px; /* Пространство между элементами */
     justify-content: center;
-    gap: 30px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-/* ✅ Стили списка */
-.column {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-    width: 100%;
-    max-width: 300px;
-}
-
-/* ✅ Принудительно показываем рамку и фон */
+/* ✅ Оформляем пункты */
 .column li {
-    background: #E8F5E9 !important; /* Светло-зелёный фон */
-    border: 2px solid #4CAF50 !important; /* Зелёная рамка */
-    padding: 12px !important;
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
+    background: #E8F5E9; /* Светло-зелёный фон */
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid #4CAF50; /* Зелёная рамка */
+    text-align: center;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-@media (max-width: 768px) {
+/* ✅ Эффект при наведении */
+.column li:hover {
+    background: #C8E6C9;
+    transform: scale(1.05);
+}
+
+/* ✅ Адаптация для мобильных */
+@media (max-width: 600px) {
     .columns {
-        flex-direction: column !important; /* Ставим колонки вертикально */
-        align-items: center !important;
-    }
-    .column {
-        width: 100% !important; /* Колонки на всю ширину */
-        text-align: center !important;
+        grid-template-columns: repeat(1, 1fr); /* ✅ Одна колонка, если экран узкий */
+        max-width: 90%;
     }
 }
 
