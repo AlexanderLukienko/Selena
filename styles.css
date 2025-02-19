@@ -217,6 +217,13 @@ body {
     width: 100%;
 }
 
+/* ✅ Стили для списка */
+.column {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 /* ✅ Контейнер для списка */
 .columns {
     display: grid;
@@ -227,15 +234,16 @@ body {
     margin: 0 auto;
 }
 
-/* ✅ Оформляем пункты */
+/* ✅ Подложка на каждый пункт (исправленный стиль) */
 .column li {
     background: #E8F5E9; /* Светло-зелёный фон */
     padding: 12px;
-    border-radius: 5px;
+    border-radius: 10px; /* ✅ Скругляем углы */
     border: 2px solid #4CAF50; /* Зелёная рамка */
     text-align: center;
     font-size: 16px;
     transition: 0.3s;
+    margin-bottom: 8px; /* ✅ Добавляем отступ снизу */
 }
 
 /* ✅ Эффект при наведении */
@@ -252,9 +260,10 @@ body {
     }
 }
 
-/* ✅ Эффект при наведении */
-.column li:hover {
-    background: #C8E6C9;
-    transform: scale(1.05);
+/* ✅ Убираем точки у списка */
+.column {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
