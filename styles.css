@@ -234,16 +234,23 @@ body {
     margin: 0 auto;
 }
 
-/* ✅ Подложка на каждый пункт (исправленный стиль) */
+/* ✅ Подложка на каждый пункт */
 .column li {
-    background: #E8F5E9; /* Светло-зелёный фон */
-    padding: 12px;
-    border-radius: 10px; /* ✅ Скругляем углы */
-    border: 2px solid #4CAF50; /* Зелёная рамка */
-    text-align: center;
-    font-size: 16px;
-    transition: 0.3s;
-    margin-bottom: 8px; /* ✅ Добавляем отступ снизу */
+    background: #E8F5E9 !important; /* Светло-зелёный фон */
+    padding: 12px !important;
+    border-radius: 10px !important; /* ✅ Скругляем углы */
+    border: 2px solid #4CAF50 !important; /* ✅ Зелёная рамка */
+    text-align: center !important;
+    font-size: 16px !important;
+    transition: 0.3s !important;
+    margin-bottom: 10px !important; /* ✅ Добавляем отступ снизу */
+}
+
+/* ✅ Исправляем адаптацию */
+@media (max-width: 768px) {
+    .column li {
+        width: 100% !important; /* ✅ Убедимся, что элементы не растягиваются */
+    }
 }
 
 /* ✅ Эффект при наведении */
@@ -252,13 +259,7 @@ body {
     transform: scale(1.05);
 }
 
-/* ✅ Адаптация для мобильных */
-@media (max-width: 600px) {
-    .columns {
-        grid-template-columns: repeat(1, 1fr); /* ✅ Одна колонка, если экран узкий */
-        max-width: 90%;
-    }
-}
+
 
 /* ✅ Убираем точки у списка */
 .column {
