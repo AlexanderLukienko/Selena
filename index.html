@@ -89,5 +89,27 @@
     <!-- Подключаем JavaScript в конце body -->
     <script src="script.js"></script>
 
+<!-- Блок с отзывами -->
+<div class="reviews-section">
+    <h2>О МНЕ КЛИЕНТЫ?</h2>
+
+    <!-- Карусель отзывов -->
+    <div class="reviews-carousel">
+        <!-- Левая стрелка -->
+        <button class="arrow left" onclick="prevReview()">&#10094;</button>
+
+        <!-- iPhone-контейнер -->
+        <div class="iphone-frame">
+            <img src="images/iphone.png" alt="iPhone" class="iphone-image">
+            <div class="iphone-screen">
+                <img id="review-image" src="images/review1.png" alt="Отзыв 1">
+            </div>
+        </div>
+
+        <!-- Правая стрелка -->
+        <button class="arrow right" onclick="nextReview()">&#10095;</button>
+    </div>
+</div>
+
 </body>
 </html>

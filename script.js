@@ -56,3 +56,45 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// Список изображений отзывов
+const reviews = [
+    "images/review1.png",
+    "images/review2.png",
+    "images/review3.png",
+    "images/review4.png"
+];
+
+let currentReview = 0;
+
+// Функция для показа следующего отзыва
+function nextReview() {
+    let reviewImage = document.getElementById("review-image");
+
+    // Добавляем плавное исчезновение
+    reviewImage.style.opacity = "0";
+
+    setTimeout(() => {
+        currentReview = (currentReview + 1) % reviews.length;
+        reviewImage.src = reviews[currentReview];
+
+        // Добавляем плавное появление
+        reviewImage.style.opacity = "1";
+    }, 300);
+}
+
+// Функция для показа предыдущего отзыва
+function prevReview() {
+    let reviewImage = document.getElementById("review-image");
+
+    // Добавляем плавное исчезновение
+    reviewImage.style.opacity = "0";
+
+    setTimeout(() => {
+        currentReview = (currentReview - 1 + reviews.length) % reviews.length;
+        reviewImage.src = reviews[currentReview];
+
+        // Добавляем плавное появление
+        reviewImage.style.opacity = "1";
+    }, 300);
+}
