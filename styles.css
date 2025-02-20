@@ -294,49 +294,22 @@ body {
     margin-top: 30px;
 }
 
-/* ✅ iPhone-контейнер (адаптивный размер) */
-.iphone-frame {
-    position: relative;
-    width: 30vw; /* Делаем относительно ширины экрана */
-    max-width: 300px; /* Максимальный размер */
+/* ✅ Слайдер */
+.slider {
+    width: 400px; /* Фиксируем ширину */
+    max-width: 80vw; /* Адаптация */
     height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* ✅ Сам iPhone */
-.iphone-image {
-    width: 100%;
-    height: auto;
-}
-
-/* ✅ Экран iPhone */
-.iphone-screen {
-    position: absolute;
-    width: 85%;
-    height: 77%;
-    top: 11%;
-    left: 7.5%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* ✅ Отзыв внутри экрана */
-.iphone-screen img {
+/* ✅ Отзыв (изображение) */
+.slider img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.5s ease-in-out;
-}
-
-/* ✅ Фиксируем изображение отзыва */
-.iphone-screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -359,16 +332,14 @@ body {
     background: #388E3C;
 }
 
+/* ✅ Адаптация для мобильных */
 @media (max-width: 600px) {
-    .iphone-frame {
-        width: 50vw; /* Сделаем меньше на мобильных */
-        max-width: 250px;
+    .slider {
+        max-width: 90vw;
     }
-
     .reviews-carousel {
         flex-direction: column;
     }
-
     .arrow {
         position: absolute;
         top: 50%;

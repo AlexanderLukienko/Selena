@@ -71,14 +71,14 @@ let currentReview = 0;
 function nextReview() {
     let reviewImage = document.getElementById("review-image");
 
-    // Добавляем плавное исчезновение
+    // Анимация исчезновения
     reviewImage.style.opacity = "0";
 
     setTimeout(() => {
         currentReview = (currentReview + 1) % reviews.length;
         reviewImage.src = reviews[currentReview];
 
-        // Добавляем плавное появление
+        // Анимация появления
         reviewImage.style.opacity = "1";
     }, 300);
 }
@@ -87,14 +87,14 @@ function nextReview() {
 function prevReview() {
     let reviewImage = document.getElementById("review-image");
 
-    // Добавляем плавное исчезновение
+    // Анимация исчезновения
     reviewImage.style.opacity = "0";
 
     setTimeout(() => {
         currentReview = (currentReview - 1 + reviews.length) % reviews.length;
         reviewImage.src = reviews[currentReview];
 
-        // Добавляем плавное появление
+        // Анимация появления
         reviewImage.style.opacity = "1";
     }, 300);
 }
