@@ -62,7 +62,9 @@ const reviews = [
     "images/review1.png",
     "images/review2.png",
     "images/review3.png",
-    "images/review4.png"
+    "images/review4.png",
+    "images/review5.png",
+    "images/review6.png",
 ];
 
 let currentReview = 0;
