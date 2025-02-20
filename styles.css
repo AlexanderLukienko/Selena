@@ -228,7 +228,7 @@ body {
 .columns {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* ✅ Две колонки */
-    gap: 10px; /* Пространство между элементами */
+    gap: 15px; /* ✅ Увеличенный отступ между блоками */
     justify-content: center;
     max-width: 500px;
     margin: 0 auto;
@@ -236,20 +236,25 @@ body {
 
 /* ✅ Подложка на каждый пункт */
 .column li {
-    background: #E8F5E9 !important; /* Светло-зелёный фон */
-    padding: 12px !important;
-    border-radius: 10px !important; /* ✅ Скругляем углы */
-    border: 2px solid #4CAF50 !important; /* ✅ Зелёная рамка */
+    background: #E8F5E9 !important;
+    padding: 14px !important;
+    border-radius: 12px !important; /* ✅ Чуть больше закругления */
+    border: 2px solid #4CAF50 !important;
     text-align: center !important;
     font-size: 16px !important;
     transition: 0.3s !important;
-    margin-bottom: 10px !important; /* ✅ Добавляем отступ снизу */
+    margin-bottom: 12px !important; /* ✅ Раздвигаем элементы */
 }
 
 /* ✅ Исправляем адаптацию */
 @media (max-width: 768px) {
+    .columns {
+        gap: 12px; /* ✅ Чуть меньше отступ на мобильных */
+    }
+
     .column li {
-        width: 100% !important; /* ✅ Убедимся, что элементы не растягиваются */
+        width: 100% !important;
+        margin-bottom: 12px !important;
     }
 }
 
@@ -315,20 +320,45 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
-/* ✅ Красивые кнопки-стрелки */
+/* ✅ Фиксируем стрелки */
 .arrow {
-    background: rgba(76, 175, 80, 0.9); /* Полупрозрачный зелёный */
+    background: rgba(76, 175, 80, 0.9);
     border: none;
     color: white;
     font-size: 32px;
     cursor: pointer;
-    padding: 15px;
+    padding: 15px; /* ✅ Сделали компактнее */
     border-radius: 50%;
-    margin: 0 15px;
     transition: background 0.3s ease-in-out;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    min-width: 45px; /* ✅ Гарантия, что кнопки не сжимаются */
+}
+
+/* ✅ Позиционируем стрелки */
+.left {
+    left: -5%; /* ✅ Теперь не выходят за границы */
+}
+
+.right {
+    right: -5%;
+}
+
+/* ✅ Адаптация для мобильных */
+@media (max-width: 600px) {
+    .arrow {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .left {
+        left: 10px;
+    }
+
+    .right {
+        right: 10px;
+    }
 }
 
 /* ✅ Эффект при наведении */
