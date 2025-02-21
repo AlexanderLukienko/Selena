@@ -410,3 +410,89 @@ body {
         padding: 10px;
     }
 }
+
+/* ✅ Блок с подарками */
+.gifts-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* ✅ Заголовок */
+.gifts-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ✅ Контейнер для подарков (в 1 ряд даже на телефоне) */
+.gifts-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap; /* ✅ Запрещаем перенос на мобильных */
+    overflow-x: auto; /* ✅ Добавляем скролл при нехватке места */
+    padding-bottom: 10px;
+}
+
+/* ✅ Карточка подарка */
+.gift-card {
+    width: 180px;
+    border: 2px dashed #4CAF50; /* Пунктирная рамка */
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    background: white;
+    position: relative;
+}
+
+/* ✅ Метка "FREE" */
+.free-badge {
+    background: #4CAF50;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ✅ Изображение подарка */
+.gift-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* ✅ Название подарка */
+.gift-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* ✅ Старая цена (зачёркнутая) */
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* ✅ Адаптация для мобильных */
+@media (max-width: 768px) {
+    .gifts-container {
+        overflow-x: auto;
+        flex-wrap: nowrap; /* ✅ Оставляем в 1 ряд */
+        justify-content: flex-start;
+    }
+
+    .gift-card {
+        min-width: 160px; /* ✅ Гарантируем, что они не сжимаются */
+    }
+}
