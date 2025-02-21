@@ -516,3 +516,26 @@ body {
         min-width: 160px; /* ✅ Чтобы они не сжимались */
     }
 }
+
+/* ✅ Стили для кнопки «Заказать» */
+.order-btn {
+    background: #4CAF50;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* ✅ Эффект при наведении */
+.order-btn:hover {
+    background: #388E3C;
+}

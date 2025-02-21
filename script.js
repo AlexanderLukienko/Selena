@@ -6,7 +6,6 @@ function startCountdown(duration) {
         let minutes = Math.floor((timer % 3600) / 60);
         let seconds = timer % 60;
 
-        // Проверяем, есть ли элементы на странице
         let hoursElement = document.getElementById('hours');
         let minutesElement = document.getElementById('minutes');
         let secondsElement = document.getElementById('seconds');
@@ -18,30 +17,26 @@ function startCountdown(duration) {
         }
 
         if (--timer < 0) {
-            timer = duration; // Можно остановить таймер, если нужен однократный отсчёт
+            timer = duration;
         }
     }
 
-    updateCountdown(); // Запускаем сразу, чтобы не ждать 1 секунду
-    setInterval(updateCountdown, 1000); // Обновляем каждую секунду
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 }
 
-// Запускаем таймер на 9 часов 33 минуты 32 секунды
+// Запускаем таймер
 document.addEventListener("DOMContentLoaded", function () {
     startCountdown(9 * 3600 + 33 * 60 + 32);
 });
 
+// Делаем карточки товаров кликабельными
 document.addEventListener("DOMContentLoaded", function () {
-    // Делаем карточки товаров кликабельными
     document.querySelectorAll('.package-card').forEach(card => {
         card.addEventListener('click', () => {
-            // ✅ Удаляем выделение у всех карточек перед установкой нового
             document.querySelectorAll('.package-card').forEach(c => c.classList.remove('selected'));
-
-            // ✅ Добавляем выделение к выбранной карточке
             card.classList.add('selected');
 
-            // ✅ Отмечаем radio-кнопку внутри карточки
             const input = card.querySelector('input');
             if (input) {
                 input.checked = true;
@@ -49,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ✅ Останавливаем всплытие события клика на input, чтобы не мешал карточке
     document.querySelectorAll('.package-card input').forEach(input => {
         input.addEventListener('click', (event) => {
             event.stopPropagation();
@@ -72,15 +66,11 @@ let currentReview = 0;
 // Функция для показа следующего отзыва
 function nextReview() {
     let reviewImage = document.getElementById("review-image");
-
-    // Анимация исчезновения
     reviewImage.style.opacity = "0";
 
     setTimeout(() => {
         currentReview = (currentReview + 1) % reviews.length;
         reviewImage.src = reviews[currentReview];
-
-        // Анимация появления
         reviewImage.style.opacity = "1";
     }, 300);
 }
@@ -88,15 +78,30 @@ function nextReview() {
 // Функция для показа предыдущего отзыва
 function prevReview() {
     let reviewImage = document.getElementById("review-image");
-
-    // Анимация исчезновения
     reviewImage.style.opacity = "0";
 
     setTimeout(() => {
         currentReview = (currentReview - 1 + reviews.length) % reviews.length;
         reviewImage.src = reviews[currentReview];
-
-        // Анимация появления
         reviewImage.style.opacity = "1";
     }, 300);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const orderButton = document.getElementById("order-button");
+
+    if (orderButton) {
+        orderButton.addEventListener("click", function () {
+            // 📌 Telegram username (убираем @)
+            const telegramUsername = "Selena_Astrology";
+
+            // 📌 Ссылка на чат в Telegram без сообщения
+            const telegramURL = `https://t.me/${telegramUsername}`;
+
+            // 📌 Открываем Telegram
+            window.open(telegramURL, "_blank");
+        });
+    } else {
+        console.warn("Кнопка 'Заказать' не найдена!");
+    }
+});
